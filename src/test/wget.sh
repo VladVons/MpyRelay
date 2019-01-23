@@ -35,8 +35,8 @@ Hosts()
     for Host in $aHosts; do
         echo $Host
 
-        #$wget $Host
-        $wget $Host/sys/api1
+        $wget $Host
+        #$wget $Host/sys/api1
 
 
         #$wget $Host/sys/log --post-data '{"msg":"Hello"}'
@@ -51,7 +51,7 @@ Hosts()
         #$wget $Host/sys/exec --post-data '{"script":"import gc; result=gc.mem_free()"}'
         #$wget $Host/sys/exec --post-data '{"script":"2/0"}'
 
-        #$wget $Host/sys/tail --post-data '{"file":"MpyRelay.log", "ofst":20000}'
+        $wget $Host/sys/tail --post-data '{"file":"AppConf.py", "ofst":20000}'
 
         #$wget $Host/sys/update --post-data '{"url":"http://192.168.2.11/relay/ver.json"}'
         #$wget $Host/sys/update --post-data '{"url":"http://download.oster.com.ua/www/relay/ver.json"}'
@@ -71,7 +71,7 @@ Hosts()
 }
 
 #Hosts "http://192.168.2.131  http://192.168.2.133  http://192.168.2.143  http://192.168.2.144  http://192.168.2.149"
-Hosts "http://192.168.2.138"
+Hosts "http://192.168.2.136"
 
 
 #Hosts "http://192.168.2.131"
