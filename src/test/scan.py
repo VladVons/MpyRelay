@@ -74,10 +74,11 @@ class TRelayScan():
                 else:
                     print(Addr, self.Port, '?')
             else:
-                #sys.stdout.write('.')
-                #sys.stdout.flush()
-                #print('.\b')
-                print(Addr, self.Port)
+                if (ip % 10 == 0):
+                    #sys.stdout.write('.')
+                    #sys.stdout.flush()
+                    #print('.\b')
+                    print(Addr, self.Port)
         return Result
 
 
@@ -86,7 +87,9 @@ RelayScan = TRelayScan()
 #RelayScan.IpBegin = 130
 #RelayScan.IpEnd   = 140
 
+Items = RelayScan.Scan()
+print('Summory')
 Cnt = 0
-for Item in RelayScan.Scan():
+for Item in Items:
     Cnt += 1
     print(Cnt, Item) 
