@@ -51,15 +51,16 @@ Hosts()
         #$wget $Host/sys/exec --post-data '{"script":"import gc; result=gc.mem_free()"}'
         #$wget $Host/sys/exec --post-data '{"script":"2/0"}'
 
-        $wget $Host/sys/tail --post-data '{"file":"AppConf.py", "ofst":20000}'
+        #$wget $Host/sys/tail --post-data '{"file":"boot.py", "ofst":20000}'
+        #$wget $Host/sys/tail --post-data '{"file":"AppConf.py", "ofst":20000}'
 
-        #$wget $Host/sys/update --post-data '{"url":"http://192.168.2.11/relay/ver.json"}'
+        #$wget $Host/sys/update --post-data '{"url":"http://192.168.22.11/relay/ver.json"}'
         #$wget $Host/sys/update --post-data '{"url":"http://download.oster.com.ua/www/relay/ver.json"}'
         #$wget $Host/sys/reset --timeout=1 --tries=1
         #$wget $Host/sys/exit
 
 
-        #$wget $Host/dev/dht22  --post-data '{"pin":14}'
+        $wget $Host/dev/dht22  --post-data '{"pin":14}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14, "id":["28ff176193160491"]}'
         #$wget $Host/dev/mhz19  --post-data '{"port":0}'
@@ -71,7 +72,7 @@ Hosts()
 }
 
 #Hosts "http://192.168.2.131  http://192.168.2.133  http://192.168.2.143  http://192.168.2.144  http://192.168.2.149"
-Hosts "http://192.168.2.136"
+Hosts "http://192.168.22.167"
 
 
 #Hosts "http://192.168.2.131"

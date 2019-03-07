@@ -37,6 +37,7 @@ Upgrade()
   sudo pip install esptool       --upgrade
   sudo pip install adafruit-ampy --upgrade 
   #sudo pip install picocom       --upgrade
+  #pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 }
 
 
@@ -96,6 +97,7 @@ EspFirmware()
   # http://micropython.org/download#esp8266
 
   Dir="/mnt/hdd/data1/share/public/image/esp/micropython"
+  #FileName="esp8266-20190125-v1.10.bin"
   FileName="esp8266-20180511-v1.9.4.bin"
   #FileName="esp32-20180511-v1.9.4.bin"
 

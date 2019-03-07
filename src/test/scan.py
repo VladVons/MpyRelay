@@ -16,7 +16,7 @@ class TRelayScan():
         self.IpBegin = 1
         self.IpEnd   = 255
         self.Port    = 80
-        self.TimeOut = 0.3
+        self.TimeOut = 0.35
 
     @staticmethod
     def GetLocalIP():
@@ -84,8 +84,8 @@ class TRelayScan():
 
 #RelayScan = TRelayScan('192.168.2.0')
 RelayScan = TRelayScan()
-#RelayScan.IpBegin = 130
-#RelayScan.IpEnd   = 140
+RelayScan.IpBegin = 200
+RelayScan.IpEnd   = 250
 
 Items = RelayScan.Scan()
 print('Summory')
