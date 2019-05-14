@@ -15,6 +15,7 @@ import dht
 #
 from Log import Log
 
+
 def Get(aPin):
     #Pin = machine.Pin(aPin, machine.Pin.IN, machine.Pin.PULL_UP)
     Pin = machine.Pin(aPin)
@@ -34,6 +35,6 @@ def Get(aPin):
 
 
 def Api(aData):
-    aPin   = aData.get('pin', 0)
+    aPin = aData.get('pin', 0)
     R = Get(aPin)
     return {'temperature': R[0], 'humidity': R[1]}
