@@ -26,7 +26,8 @@ class TMHZ19(TSerial):
         try:
             In = self.Send(Out, 9) 
             R = (In[2] * 256) + In[3]
-        except:
+        except as e:
+            Log.Print(1, 'Err: TMHZ19', 'GetCO2()', e)
             R = None
         return R
 

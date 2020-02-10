@@ -7,6 +7,7 @@ Description:.
 
 import gc
 import os
+import sys
 import time
 #
 from Conf import Conf
@@ -30,6 +31,7 @@ def Api(aData):
         'Author':  'VladVons@gmail.com',
         'SW':      __version__,
         'FW':       os.uname().version,
+        'PW':       '%s.%s.%s' % (sys.version_info[0], sys.version_info[1], sys.version_info[2]),
         'ID':       Conf.Get('ID'),
         'MemFree':  gc.mem_free(),
         'MemAlloc': gc.mem_alloc(),

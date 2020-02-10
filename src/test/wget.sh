@@ -61,7 +61,8 @@ Hosts()
 
 
         #$wget $Host/dev/dht22  --post-data '{"pin":14}'
-        $wget $Host/dev/mq2  --post-data '{"pin":0}'
+        $wget $Host/dev/bme280  --post-data '{}'
+        #$wget $Host/dev/mq2  --post-data '{"pin":0}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14, "id":["28ff176193160491"]}'
         #$wget $Host/dev/mhz19  --post-data '{"port":0}'
@@ -72,12 +73,30 @@ Hosts()
     done
 }
 
-#Hosts "http://192.168.2.131  http://192.168.2.133  http://192.168.2.143  http://192.168.2.144  http://192.168.2.149"
-Hosts "http://192.168.22.205"
-#Hosts "http://192.168.22.206"
-#Hosts "http://dh1.lan"
+
+Once()
+{
+  #Hosts "http://192.168.2.131  http://192.168.2.133  http://192.168.2.143  http://192.168.2.144  http://192.168.2.149"
+  Hosts "http://192.168.2.203"
+  #Hosts "http://192.168.22.206"
+  #Hosts "http://dh1.lan"
 
 
-#Hosts "http://192.168.2.131"
-#Hosts "http://192.168.2.143"
-#Hosts "http://192.168.2.133"
+  #Hosts "http://192.168.2.131"
+  #Hosts "http://192.168.2.143"
+  #Hosts "http://192.168.2.133"
+}
+
+
+Loop()
+{
+  while true; do
+    Hosts "http://192.168.2.203"
+    echo
+    echo
+    sleep 1
+  done
+}
+
+#Once
+Loop

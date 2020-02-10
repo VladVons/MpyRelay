@@ -97,9 +97,13 @@ EspFirmware()
   # http://micropython.org/download#esp8266
 
   Dir="/mnt/hdd/data1/share/public/image/esp/micropython"
+  #FileName="esp8266-20190519-v1.10-356-g653e1756c.bin"
   #FileName="esp8266-20190125-v1.10.bin"
-  FileName="esp8266-20180511-v1.9.4.bin"
+  #FileName="esp8266-20180511-v1.9.4.bin"
   #FileName="esp32-20180511-v1.9.4.bin"
+  #FileName="esp8266-20190529-v1.11.bin"
+  FileName="esp8266-20191220-v1.12.bin"
+
 
   File=$Dir/$FileName
   if [ -f $File ] ; then

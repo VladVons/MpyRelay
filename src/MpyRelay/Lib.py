@@ -32,5 +32,5 @@ def CallTry(aCnt, aFunc, aArgs):
         except Exception as E:
             Sleep += 0.1
             time.sleep(Sleep)
-            print('CallTry', aCnt, E)
+            print('CallTry', aArgs, aCnt, E)
     return R
