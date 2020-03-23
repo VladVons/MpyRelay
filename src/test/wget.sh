@@ -61,7 +61,8 @@ Hosts()
 
 
         #$wget $Host/dev/dht22  --post-data '{"pin":14}'
-        $wget $Host/dev/bme280  --post-data '{}'
+        $wget $Host/dev/am2320
+        #$wget $Host/dev/bme280  --post-data '{}'
         #$wget $Host/dev/mq2  --post-data '{"pin":0}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14}'
         #$wget $Host/dev/ds18b20 --post-data '{"pin":14, "id":["28ff176193160491"]}'
@@ -77,7 +78,7 @@ Hosts()
 Once()
 {
   #Hosts "http://192.168.2.131  http://192.168.2.133  http://192.168.2.143  http://192.168.2.144  http://192.168.2.149"
-  Hosts "http://192.168.2.203"
+  Hosts "http://192.168.2.206"
   #Hosts "http://192.168.22.206"
   #Hosts "http://dh1.lan"
 
@@ -91,12 +92,14 @@ Once()
 Loop()
 {
   while true; do
-    Hosts "http://192.168.2.203"
+    #Hosts "http://192.168.2.210"
+    Hosts "http://192.168.5.84"
+
     echo
     echo
     sleep 1
   done
 }
 
-#Once
-Loop
+Once
+#Loop

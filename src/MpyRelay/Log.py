@@ -54,6 +54,8 @@ class TLog():
         self.Cnt    = 0
         self.Echoes = [] 
 
+        self.AddEcho(TConsole())
+
     def AddEcho(self, aEcho):
         self.Echoes.append(aEcho) 
 
@@ -68,7 +70,6 @@ class TLog():
 
 
 Log = TLog()
-Log.AddEcho(TConsole())
 #Log.AddEcho(TFile('App.log'))
 
 '''
