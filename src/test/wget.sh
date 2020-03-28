@@ -61,6 +61,7 @@ Hosts()
 
 
         #$wget $Host/dev/dht22  --post-data '{"pin":14}'
+        #$wget $Host/dev/sht3x
         $wget $Host/dev/am2320
         #$wget $Host/dev/bme280  --post-data '{}'
         #$wget $Host/dev/mq2  --post-data '{"pin":0}'
@@ -93,7 +94,7 @@ Loop()
 {
   while true; do
     #Hosts "http://192.168.2.210"
-    Hosts "http://192.168.5.84"
+    Hosts "http://192.168.2.214"
 
     echo
     echo
@@ -101,5 +102,5 @@ Loop()
   done
 }
 
-Once
-#Loop
+#Once
+Loop

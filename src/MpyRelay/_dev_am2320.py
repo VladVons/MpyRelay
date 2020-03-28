@@ -8,16 +8,19 @@ Description: micropython ESP8266
 
 import machine
 #
-from Lib_dev_am2320 import AM2320
+#from Lib_dev_am2320 import AM2320
+from Lib_dev_am2320_b import AM2320
 from Log import Log
 
 
 def Api(aData):
-    i2c = machine.I2C(scl= machine.Pin(5), sda= machine.Pin(4))
+    #i2c = machine.I2C(scl= machine.Pin(5), sda= machine.Pin(4))
+    i2c = machine.I2C(1)
     try:
         Obj = AM2320(i2c)
-        Obj.measure()
-        R = [Obj.temperature(), Obj.humidity()]
+        #Obj.measure()
+        #R = [Obj.temperature(), Obj.humidity()]
+        R = [Obj.temperature, Obj.relative_humidity]
     except Exception as e:
         Log.Print(1, 'Err: dev_am2320', 'Api()', e)
         R = [None, None]

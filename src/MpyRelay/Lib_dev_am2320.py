@@ -22,6 +22,8 @@ class AM2320:
         except OSError:
             print('Except OSError')
             #pass
+
+        time.sleep_ms(10)
         # read 4 registers starting at offset 0x00
         self.i2c.writeto(address, b'\x03\x00\x04')
         # wait at least 1.5ms
